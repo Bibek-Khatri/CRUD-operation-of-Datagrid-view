@@ -1,3 +1,5 @@
+using System.Data.OleDb;
+
 namespace Datagrid
 {
     public partial class Form1 : Form
@@ -5,6 +7,12 @@ namespace Datagrid
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string connectionSting = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Pemba\BookCShrp.accdb";
+            OleDbConnection oleDbConnection = new OleDbConnection(connectionSting);
         }
     }
 }

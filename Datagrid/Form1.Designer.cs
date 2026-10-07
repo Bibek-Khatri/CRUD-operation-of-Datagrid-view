@@ -37,7 +37,7 @@
             textBox2 = new TextBox();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
-            button1 = new Button();
+            Create = new Button();
             button2 = new Button();
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -46,47 +46,48 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(59, 37);
+            dataGridView1.Location = new Point(12, 37);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(238, 168);
+            dataGridView1.Size = new Size(361, 288);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Location = new Point(403, 65);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(67, 20);
             label1.TabIndex = 1;
-            label1.Text = "label1";
+            label1.Text = "BookKey";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(403, 121);
             label2.Name = "label2";
-            label2.Size = new Size(50, 20);
+            label2.Size = new Size(38, 20);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "Title";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Location = new Point(403, 185);
             label3.Name = "label3";
-            label3.Size = new Size(50, 20);
+            label3.Size = new Size(47, 20);
             label3.TabIndex = 3;
-            label3.Text = "label3";
+            label3.Text = "Pages";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(403, 246);
             label4.Name = "label4";
-            label4.Size = new Size(50, 20);
+            label4.Size = new Size(69, 20);
             label4.TabIndex = 4;
-            label4.Text = "label4";
+            label4.Text = "Publisher";
             // 
             // textBox1
             // 
@@ -116,14 +117,15 @@
             textBox4.Size = new Size(196, 27);
             textBox4.TabIndex = 8;
             // 
-            // button1
+            // Create
             // 
-            button1.Location = new Point(431, 317);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 9;
-            button1.Text = "Create";
-            button1.UseVisualStyleBackColor = true;
+            Create.Location = new Point(431, 317);
+            Create.Name = "Create";
+            Create.Size = new Size(94, 29);
+            Create.TabIndex = 9;
+            Create.Text = "Create";
+            Create.UseVisualStyleBackColor = true;
+            Create.Click += Create_Click;
             // 
             // button2
             // 
@@ -133,6 +135,7 @@
             button2.TabIndex = 10;
             button2.Text = "Update";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -150,7 +153,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(Create);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(textBox2);
@@ -179,7 +182,7 @@
         private TextBox textBox2;
         private TextBox textBox3;
         private TextBox textBox4;
-        private Button button1;
+        private Button Create;
         private Button button2;
         private Button button3;
     }

@@ -40,6 +40,7 @@
             Create = new Button();
             button2 = new Button();
             button3 = new Button();
+            clear = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -145,12 +146,23 @@
             button3.TabIndex = 11;
             button3.Text = "Delete";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // clear
+            // 
+            clear.Location = new Point(431, 361);
+            clear.Name = "clear";
+            clear.Size = new Size(97, 26);
+            clear.TabIndex = 12;
+            clear.Text = "Clear";
+            clear.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(clear);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(Create);
@@ -185,5 +197,6 @@
         private Button Create;
         private Button button2;
         private Button button3;
+        private Button clear;
     }
 }
